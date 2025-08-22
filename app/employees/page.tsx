@@ -76,7 +76,7 @@ export default function EmployeesPage() {
 
     return (
         <DashboardLayout>
-            <div className="p-6 bg-gray-50 dark:bg-gray-900">
+            <div className="md:p-6 bg-gray-50 dark:bg-gray-900">
                 <div className="bg-white dark:bg-gray-800 border rounded-lg shadow-sm border-gray-200 dark:border-gray-700">
                     <div className="p-4 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
                         <Input
@@ -152,11 +152,11 @@ export default function EmployeesPage() {
                         </Table>
                     </div>
 
-                    <div className="flex justify-between items-center p-4 border-t border-gray-200 dark:border-gray-700">
+                    <div className="flex flex-wrap justify-between items-center p-4 border-t border-gray-200 dark:border-gray-700">
                         <div className="dark:text-gray-100">
                             Showing {(currentPage - 1) * pageSize + 1} to {Math.min(currentPage * pageSize, filteredEmployees.length)} of {filteredEmployees.length}
                         </div>
-                        <div className="flex gap-2">
+                        <div className="flex gap-2 md:mt-0 mt-2">
                             <Button onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))} disabled={currentPage === 1}>
                                 Previous
                             </Button>

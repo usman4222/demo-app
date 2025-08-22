@@ -53,7 +53,7 @@ export default function EmployeeProfilePage() {
 
     return (
         <DashboardLayout>
-            <div className="p-4">
+            <div className="md:p-4">
                 <div className="flex justify-between items-center mb-4">
                     <h2 className="text-xl font-semibold dark:text-gray-100">
                         {employee?.name || "Employee"}'s Profile
@@ -81,7 +81,7 @@ export default function EmployeeProfilePage() {
                     ) : employee ? (
                         <>
                             <CardHeader className=" border-b border-gray-200 dark:border-gray-600 flex flex-col sm:flex-row justify-between items-start sm:items-center">
-                                <div className="flex items-center space-x-6 mb-4 sm:mb-0">
+                                <div className="flex flex-wrap items-center space-x-6 mb-4 sm:mb-0">
                                     <Avatar className="h-20 w-20 border-2 border-teal-500">
                                         {employee.profile_photo ? (
                                             <AvatarImage
@@ -95,7 +95,7 @@ export default function EmployeeProfilePage() {
                                             </AvatarFallback>
                                         )}
                                     </Avatar>
-                                    <div>
+                                    <div className="md:mt-0 mt-2">
                                         <h2 className="text-[18.72px] font-semibold text-[#059691] dark:text-teal-400">
                                             {employee.name}
                                         </h2>
